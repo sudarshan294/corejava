@@ -1,0 +1,15 @@
+package app;
+
+public class ccc {
+	public static void main(String[] args) {
+		ccc b = new ccc();
+		b.add("abc"," xyz");
+	}
+	
+		public void add(int i ,int j)
+		{
+			int k=i+j;
+			System.out.println(k);
+		}
+	
+}

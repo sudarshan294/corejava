@@ -1,0 +1,12 @@
+package app3;
+
+import app2.example;
+
+public class addtionalexample {
+	
+		public static void main(String[] args) {
+			
+			example c =new example();
+			c.add(20, 30);
+		}
+}
