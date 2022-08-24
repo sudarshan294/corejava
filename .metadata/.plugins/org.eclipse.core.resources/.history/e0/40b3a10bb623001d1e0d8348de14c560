@@ -23,6 +23,7 @@ public class c {
 
 	public static void main(String sidhu) {
 		
+		System.out.println("main2");
 	}
 	public static void main(int sidhu) {
 	
