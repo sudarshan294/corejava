@@ -1,0 +1,10 @@
+package oops.inheritance;
+
+public class Addtion extends Calculator{	
+	public static void main(String[] args) {
+		
+		Addition ad = new Addtion();
+		ad.add(40,60);
+		
+	}
+}

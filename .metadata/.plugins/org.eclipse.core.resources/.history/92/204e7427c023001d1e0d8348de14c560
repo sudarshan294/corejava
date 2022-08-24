@@ -1,0 +1,19 @@
+package oops.inheritance;
+public class parent
+{  
+	public static void main(String[] args) {
+		
+	}
+
+public void surname()
+ {
+	System.out.println("surname");
+}
+
+public void asserts()
+{
+	System.out.println("some asserts ");
+}
+	
+}
+
