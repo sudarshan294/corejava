@@ -1,0 +1,11 @@
+package oops.inheritance;
+
+public class child1 extends parent {
+	public static void main(String[] args) {
+		
+		child c = new child();
+		c.asserts();
+		c.surname();
+		
+	}
+}
