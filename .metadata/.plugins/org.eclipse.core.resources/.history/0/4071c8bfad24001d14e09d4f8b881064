@@ -1,0 +1,14 @@
+package oops.abstraction;
+
+interface E
+{
+/*	public static final*/ string name ="abc";
+	public abstract void test1();
+	public void test2();
+	abstract void test3();
+	void test4();
+}
+
+public class Example5 {
+
+}

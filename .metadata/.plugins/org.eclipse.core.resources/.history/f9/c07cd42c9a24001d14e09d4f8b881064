@@ -1,0 +1,16 @@
+package oops.casting;
+
+public class DowncastingExample {
+	
+	public static void main(String[] args) {
+		
+		int i = 123;
+		double d = i;
+		 
+		int i = (int)d;
+		System.out.println(i);
+		
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package oops.polymorphism;
+class tree
+{
+	public void leafs()
+	{
+		
+		System.out.println("tree leafs");
+	}
+}
+public class BananaTree extends tree {
+	
+	public static void main(String[] args) {
+		
+		BananaTree b = new BananaTree();
+		b.leafs();
+	}
+}
