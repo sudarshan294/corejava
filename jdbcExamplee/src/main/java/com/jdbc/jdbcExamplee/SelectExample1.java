@@ -6,9 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.log4j.Logger;
+
 public class SelectExample1 {
 	
+	public static Logger log = Logger.getLogger(SelectExample1.class);
+	
 	public static void main(String[] args) {
+		
 		SelectExample1.retriveData();
 	}
 	
@@ -29,12 +34,12 @@ public class SelectExample1 {
 			ResultSet rs = stmt.executeQuery(sql);
 			while(rs.next())
 			{
-				System.out.println(rs.getString("id"));
-				System.out.println(rs.getString("Lastname"));
-				System.out.println(rs.getString("Firstname"));
-				System.out.println(rs.getString("Age"));
+				log.info(rs.getString("id"));
+				log.info(rs.getString("Lastname"));
+				log.info(rs.getString("Firstname"));
+				log.info(rs.getString("Age"));
 				
-				System.out.println("=============");
+				log.info("=============");
 			}
 		}
 		catch (Exception e) 
