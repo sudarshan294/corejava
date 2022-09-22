@@ -5,7 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.log4j.Logger;
+
 public class UpdateExample1 {
+	
+	public static Logger log = Logger.getLogger(UpdateExample1.class);
+	
 	public static void main(String[] args) {
 
 		UpdateExample1.updateData();
@@ -29,11 +34,11 @@ public class UpdateExample1 {
 			int i = stmt.executeUpdate(sql);
 			if (i > 0)
 			{
-				System.out.println("Record Updated sucessfully");
+				log.info("Record Updated sucessfully");
 			}
 			else
 			{
-				System.out.println("Record not Updated.....");
+				log.info("Record not Updated.....");
 			}
 
 		}

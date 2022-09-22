@@ -5,7 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.log4j.Logger;
+
 public class InsertExample1 {
+	
+	public static Logger log = Logger.getLogger(InsertExample1.class);
+	
 	public static void main(String[] args) {
 		
 		InsertExample1.insertData();
@@ -18,10 +23,7 @@ public class InsertExample1 {
 		//Open a connection
 		try
 		{
-			Class.forName("com.mysql.jdbc.Driver");  
-			con = DriverManager.getConnection(  
-			"jdbc:mysql://localhost:3306/corejava","root","sidhu");
-			
+			con = DBConnection.getDBConnection();
 			//create a statement and Execute Query
 			
 			String sql ="insert into student(Lastname,Firstname,Age)values('ganesh','gane', 22)";
@@ -29,11 +31,11 @@ public class InsertExample1 {
 			int i = stmt.executeUpdate(sql);
 			if (i > 0)
 			{
-				System.out.println("intserted sucessfully");
+				log.info("intserted sucessfully");
 			}
 			else
 			{
-				System.out.println("Record not inserted.....");
+				log.info("Record not inserted.....");
 			}
 			
 		}
@@ -44,12 +46,9 @@ public class InsertExample1 {
 		finally 
 		{
 			//Close connection 
-			try {
-				con.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			DBConnection.closeDBConnection(con);
 		}
 	}
 }
+//
+//log4j.appender.fileAppender.layout.conversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n 

@@ -5,7 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.log4j.Logger;
+
 public class DeleteExample1 {
+	
+	public static Logger log = Logger.getLogger(UpdateExample1.class);
+	
 	public static void main(String[] args) {
 
 		DeleteExample1.deleteData();
@@ -29,11 +34,11 @@ public class DeleteExample1 {
 			int i = stmt.executeUpdate(sql);
 			if (i > 0)
 			{
-				System.out.println("Record deleted sucessfully");
+				log.info("Record deleted sucessfully");
 			}
 			else
 			{
-				System.out.println("Record not deleted.....");
+				log.info("Record not deleted.....");
 			}
 
 		}
